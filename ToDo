@@ -3,4 +3,6 @@ Setup Github Repo
     b)setup.py
     c)requirements.txt
 Src folder and build pachage
-    
+    a)Create Module Packages in Components Folder(Ingestion,Transformation,Model Trainer...)
+    b)Create Logger, Exception Handling & utils in Pipeline Folder
+EDA & Model Training on ipynb
