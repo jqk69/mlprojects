@@ -7,6 +7,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 from src.components.data_transformation import DataTransformation,DataTransformationConfig
+from src.components.model_trainer import ModelTrainerConfig,ModelTrainer
 
 @dataclass
 class DataInjestionConfig:
@@ -42,4 +43,7 @@ if __name__=="__main__":
     train_data,test_data=obj.initiate_data_injestion()
 
     data_transfromation=DataTransformation()
-    data_transfromation.initiate_data_transformation(train_data,test_data)
+    train_array,test_array,_=data_transfromation.initiate_data_transformation(train_data,test_data)
+
+    modeltrainer=ModelTrainer()
+    print(modeltrainer.initiate_model_training(train_array,test_array))
